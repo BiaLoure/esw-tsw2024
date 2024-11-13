@@ -24,7 +24,9 @@ document.querySelector('button.btn-close-perfil').addEventListener('click', func
 const toggle = document.getElementById("toggle");
 const texto = document.getElementById("tipo-usu");
 const contador = document.getElementById("cont");
-const lixos = document.getElementById('cont-lixos')
+const lixos = document.getElementById('cont-lixos');
+const btn_coleta = document.querySelectorAll(".btn-coleta");  
+const btn_criar = document.getElementById("btn-criar");
 
 toggle.addEventListener('click', function() {
   if (toggle.classList.contains('active')) {
@@ -34,6 +36,16 @@ toggle.addEventListener('click', function() {
       texto.style.color = '#3ACC97';
       contador.style.borderColor = '#3ACC97';
       lixos.textContent = 'Lixos Coletados';
+
+      // Muda botão de coleta
+      btn_coleta.forEach(button => {
+        button.style.visibility  = 'visible';  
+        
+      });
+
+      btn_criar.style.visibility = 'visible';  
+
+      
   } else {
       toggle.classList.add('active');
       toggle.textContent = 'Desativar';
@@ -41,6 +53,12 @@ toggle.addEventListener('click', function() {
       texto.style.color = '#3AB6CC';
       contador.style.borderColor = '#3AB6CC';
       lixos.textContent = 'Lixos Reciclados';
+
+      btn_coleta.forEach(button => {
+        button.style.visibility  = 'hidden';  
+      });
+
+      btn_criar.style.visibility = 'hidden';  
   }
 });
 

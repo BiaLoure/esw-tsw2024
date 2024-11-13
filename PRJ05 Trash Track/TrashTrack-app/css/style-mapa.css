@@ -215,7 +215,7 @@ input:checked + .slider:before {
     background-color: #fff;
     z-index: 10;
     max-width: 90%;
-    width: 252px;
+    width: 272px;
     height: 370px;
     border-radius: 16px;
     display: none;
@@ -273,14 +273,20 @@ input:checked + .slider:before {
         float: inline-start;
     }
 
-    .btn-denuncia {
+    .btn-denuncia ,.btn-coleta{
         background-color: #FFF;
         border: none;
-        margin-left: 22px;
+        display: inline-block; 
+        text-align: center; 
     }
 
-    .btn-denuncia > img{
+    .btn-denuncia > img {
         width: 30px;
+    }
+
+    .btn-coleta > img{
+        width: 22px;
+        margin-bottom: 2px;
     }
 
     .btn-editar{
@@ -295,7 +301,7 @@ input:checked + .slider:before {
         background-color: #FFF;
         border: none;
         padding: 0;
-        margin: 8px 0px ;
+        margin: 8px 0px 8px 14px;
     }
 
     .btn-editar >img, .btn-excluir > img{
@@ -406,8 +412,8 @@ input:checked + .slider:before {
     background-color: #fff;
     z-index: 10;
     max-width: 90%;
-    width: 252px;
-    height: 370px;
+    width: 272px;
+    height: 400px;
     border-radius: 16px;
     display: none;
     padding: 24px;
